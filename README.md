@@ -1,4 +1,3 @@
-# globant_challenge_project
 # Data Engineering Challenge - Globant
 
 ## Overview
