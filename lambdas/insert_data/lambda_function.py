@@ -1,8 +1,10 @@
 import json
 import boto3
+import urllib
 
 def lambda_handler(event, context):
     s3_file_name = event['Records'][0]['s3']['object']['key']
+    s3_file_name = urllib.parse.unquote(s3_file_name).replace('+', ' ')
     print(f"File received: {s3_file_name}")  
     
     if "hired_employees" in s3_file_name:
